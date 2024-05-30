@@ -1,0 +1,25 @@
+.navbar-nav {
+    flex-direction: row;
+}
+.navbar-nav .nav-item + .nav-item {
+    margin-left: 1rem;
+}
+
+.form {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+.form-control {
+    margin-right: 10px; /* input과 button 사이의 간격 */
+}
+
+#map{
+    flex: 1;
+    /* padding: 20px; */
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 60px;
+}
