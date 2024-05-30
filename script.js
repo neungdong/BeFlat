@@ -41,23 +41,6 @@ function filterUpdateFaclType() {
     fetchXmlData(1);
 }
 
-function displayResults(servList) {
-    var results = document.getElementById('results');
-    results.innerHTML = '';
-
-    for (var i = 0; i < servList.length; i++) {
-        var faclNm = servList[i].getElementsByTagName("faclNm")[0].textContent;
-        var faclLat = parseFloat(servList[i].getElementsByTagName("faclLat")[0].textContent);
-        var faclLng = parseFloat(servList[i].getElementsByTagName("faclLng")[0].textContent);
-
-        var resultItem = document.createElement('div');
-        resultItem.innerHTML = faclNm;
-        results.appendChild(resultItem);
-
-        displayMarker(faclLat, faclLng, faclNm);
-    }
-}
-
 function displayMarker(lat, lng, name) {
     var coords = new kakao.maps.LatLng(lat, lng);
     var marker = new kakao.maps.Marker({
