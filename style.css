@@ -1,25 +1,56 @@
-.navbar-nav {
-    flex-direction: row;
-}
-.navbar-nav .nav-item + .nav-item {
-    margin-left: 1rem;
+#map {
+  height: 100vh; /* Adjusted to fill the viewport height */
+  width: 100%;
 }
 
-.form {
-    display: flex;
-    align-items: center; /* 세로 가운데 정렬 */
+.search-bar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px; /* Add gap between elements */
 }
 
-.form-control {
-    margin-right: 10px; /* input과 button 사이의 간격 */
+.search-bar input {
+  flex: 8;
 }
 
-#map{
-    flex: 1;
-    /* padding: 20px; */
-    box-sizing: border-box;
+.search-bar button {
+  flex: 2;
 }
 
-.container {
-    padding-top: 60px;
+.bottom-sheet {
+  position: fixed;
+  bottom: -77%; /* Adjusted initial position */
+  left: 0;
+  right: 0;
+  height: 80%; /* Set height to 80% of the viewport height */
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+.bottom-sheet-handle {
+  width: 50px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+  margin: 10px auto;
+  cursor: pointer;
+  display: block;
+}
+
+.bottom-sheet-content {
+  padding: 20px;
+  height: 100%;
+  overflow: scroll;
+}
+
+.bottom-sheet.show {
+  bottom: 0; /* Ensures the bottom sheet slides up to this position */
 }
