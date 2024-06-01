@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const bottomSheet = document.getElementById("bottomSheet");
   const bottomSheetHandle = document.getElementById("bottomSheetHandle");
   const locationButton = document.getElementById("locationButton");
+  const filterApplyButton = document.getElementById("filterApplyButton");
+  const searchButton = document.getElementById("searchButton");
+  const searchInput = document.getElementById("searchInput");
 
   bottomSheetHandle.addEventListener("click", function () {
     bottomSheet.classList.toggle("show");
@@ -10,28 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
   locationButton.addEventListener("click", function () {
     moveToCurrentLocation();
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("filterApplyButton").addEventListener("click", () => {
+  filterApplyButton.addEventListener("click", function () {
     fetchXmlData(1);
   });
-  
-  document.getElementById("searchButton").addEventListener("click", () => {
-    // 검색어 입력란 가져오기
-    const searchInput = document.getElementById("searchInput");
-        
-    // 검색어 입력란이 비어있는지 확인
+
+  searchButton.addEventListener("click", function () {
     if (searchInput.value.trim() === "") {
-      // 비어있다면 알림창 표시
       alert("검색어를 입력하세요.");
     } else {
-      // 비어있지 않다면 검색 실행
       const searchParam = '&' + encodeURIComponent('faclNm') + '=' + encodeURIComponent(searchInput.value.trim());
       fetchXmlData(1, searchParam);
     }
   });
 });
+
 
 
 const SERVICE_KEY =
