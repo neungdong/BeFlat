@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 const SERVICE_KEY =
   "QkA6saf5BRmu0WE5b0JI2PRxwJh6rDL2x2qibXZxGgYPZMQ2pjhkA8IUU4lAYDJTKDd3oHB2FE3elagtrypoeg==";
 const itemsPerPage = 10;
@@ -86,7 +84,7 @@ function displayMarker(lat, lng, name, address, status, convenienceInfo) {
                   <strong>${name}</strong><br>
                   주소: ${address}<br>
                   상태: ${status}<br>
-                  편의시설: ${convenienceInfo}
+                  편의시설: ${convenienceInfo}<br><br>
                 </div>`,
     });
 
