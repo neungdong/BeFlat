@@ -54,3 +54,72 @@
 .bottom-sheet.show {
   bottom: 0; /* Ensures the bottom sheet slides up to this position */
 }
+
+.chip-container {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.chip {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 7px;
+}
+
+.chip input[type="checkbox"] {
+  display: none;
+}
+
+.chip label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.chip input[type="checkbox"]:checked + label {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-container {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px; /* Add gap between elements */
+  padding: 5px;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE와 Edge에서 스크롤바 숨기기 */
+  scrollbar-width: none;  /* Firefox에서 스크롤바 숨기기 */
+}
+
+.float-chip {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 7px;
+}
+
+.float-chip input[type="radio"] {
+  display: none;
+}
+
+.float-chip label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px gray;
+}
+
+.float-chip input[type="radio"]:checked + label {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: white;
+}
