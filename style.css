@@ -13,6 +13,11 @@
   gap: 10px;
 }
 
+#searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9em;
+}
+
 .search-bar input {
   flex: 8;
 }
@@ -55,10 +60,20 @@
   bottom: 0;
 }
 
+#totalCount {
+  font-size: 14px;
+  line-height: 0.1;
+  margin-bottom: 15px;
+}
+
 .result-item {
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 3px;
+  padding: 7px;
   border-bottom: 1px solid #ccc;
+}
+
+.result-text {
+  flex-grow: 1;
 }
 
 .chip-container {
@@ -100,14 +115,14 @@
   padding: 5px;
   white-space: nowrap;
   overflow-x: auto;
-  -ms-overflow-style: none; /* IE와 Edge에서 스크롤바 숨기기 */
-  scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .float-chip {
   display: inline-block;
   margin-top: 10px;
-  margin-right: 7px;
+  margin-right: -5px;
 }
 
 .float-chip input[type="radio"] {
@@ -132,7 +147,7 @@
 
 .customoverlay {
   position: relative;
-  bottom: 85px;
+  bottom: 45px;
   border-radius: 6px;
   border: 1px solid #ccc;
   border-bottom: 2px solid #ddd;
@@ -147,24 +162,25 @@
   text-decoration: none;
   color: #000;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
   font-size: 14px;
   font-weight: bold;
   overflow: hidden;
-  background: #d95050;
-  background: #d95050
+  background: #e5d523;
+  background: #e5d523
     url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
     no-repeat right 14px center;
 }
 .customoverlay .title {
   display: block;
   text-align: center;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   margin-right: 35px;
   padding: 10px 15px;
   font-size: 14px;
   font-weight: bold;
 }
+
 .customoverlay:after {
   content: "";
   position: absolute;
@@ -174,4 +190,150 @@
   width: 22px;
   height: 12px;
   background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+}
+
+.customoverlay .inner-div {
+  padding: 5px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.close-button {
+  position: absolute;
+  top: -3px;
+  left: 1px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-close {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/닫기.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.customoverlay .close-button:hover {
+  color: #333;
+}
+
+.convenience-icon {
+  width: 40x;
+  height: 40px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.detail-button {
+  background-color: rgba(128, 128, 128, 0.4);
+  color: white;
+  border: none;
+  padding: 1px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.detail-button:hover,
+.detail-button:focus {
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+.material-icons {
+  line-height: 24px;
+  font-size: 18px;
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.material-symbols-outlined {
+  line-height: 24px;
+  font-size: 24px;
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.search-container {
+  position: relative;
+  width: 250px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.search-icon:focus {
+  outline: none;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+#locationButton {
+  padding: 1px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lighter-text {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  text-align: center;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.icon-label {
+  display: block;
+  font-size: 10px;
+  color: #666;
+}
+
+.bottom-sheet-file-name {
+  font-size: 7px;
+  color: #666;
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.search-bar .btn {
+  flex: 2;
+}
+
+.search-bar .search-container {
+  flex: 8;
 }
